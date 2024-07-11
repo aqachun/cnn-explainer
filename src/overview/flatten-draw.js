@@ -739,7 +739,7 @@ const softmaxClicked = (arg) => {
           .attr('class', 'annotation-text softmax-detail-text')
           .style('dominant-baseline', 'baseline')
           .style('text-anchor', 'middle')
-          .text('Normalize ');
+          .text('归一化（normalize）');
         
         text.append('tspan') 
           .attr('dx', 1)
@@ -753,7 +753,7 @@ const softmaxClicked = (arg) => {
         text.append('tspan')
           .attr('x', textX)
           .attr('dy', '1.1em')
-          .text('class probabilities');
+          .text('类概率（class probabilities）');
 
         if (selectedI === 0) {
           drawArrow({
@@ -815,11 +815,11 @@ const softmaxClicked = (arg) => {
           .attr('x', textX)
           .attr('y', (svgPaddings.top + vSpaceAroundGap) / 2 + 3)
           .style('text-anchor', 'start')
-          .text('Before')
+          .text('在...之前')
           .append('tspan')
           .attr('x', textX)
           .attr('dy', '1em')
-          .text('normalization')
+          .text('归一化（normalization）')
 
 
         drawArrow({
@@ -889,11 +889,11 @@ const softmaxClicked = (arg) => {
           .append('tspan')
           .style('font-weight', 700)
           .style('dominant-baseline', 'baseline')
-          .text(`Hover over `)
+          .text(`把鼠标悬停 `)
           .append('tspan')
           .style('font-weight', 400)
           .style('dominant-baseline', 'baseline')
-          .text('to see');
+          .text('来查看');
         
         hoverText.append('tspan')
           .style('dominant-baseline', 'baseline')
@@ -1619,7 +1619,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
   
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
-    .text('Add up all products');
+    .text('把所有的结果');
   
   plusText.append('tspan')
     .attr('x', textX)
@@ -1630,7 +1630,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
   plusText.append('tspan')
     .style('fill', '#66a3c8')
     .style('dominant-baseline', 'hanging')
-    .text('element');
+    .text('元素');
 
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
@@ -1639,7 +1639,7 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .style('fill', '#b58946')
-    .text('weight');
+    .text('权重');
 
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
@@ -1649,12 +1649,12 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
     .attr('x', textX)
     .attr('dy', '1em')
     .style('dominant-baseline', 'hanging')
-    .text('and then ');
+    .text('以及偏差 ');
 
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .style('fill', '#479d94')
-    .text('bias');
+    .text('加和');
   
   drawArrow({
     group: plusAnnotation,
@@ -1690,11 +1690,11 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
     .style('dominant-baseline', 'baseline')
     .style('text-anchor', 'middle')
     .style('font-weight', 700)
-    .text('Click ')
+    .text('点击')
     .append('tspan')
     .attr('dx', 1)
     .style('font-weight', 400)
-    .text('to learn more');
+    .text('了解更多');
 
   drawArrow({
     group: softmaxAnnotation,
@@ -1723,25 +1723,25 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
   let tempTspan = flattenText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .style('font-weight', 700)
-    .text('Hover over ');
+    .text('把鼠标悬停 ');
   
   tempTspan.append('tspan')
     .attr('dx', 1)
     .style('font-weight', 400)
     .style('dominant-baseline', 'hanging')
-    .text('matrix to');
+    .text('在矩阵上');
   
   flattenText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .attr('x', textX)
     .attr('dy', '1em')
-    .text('see how it is flattened');
+    .text('来看它如何被展平');
   
   flattenText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .attr('x', textX)
     .attr('dy', '1em')
-    .text('into a 1D array!');
+    .text('为一个一维向量');
 
   drawArrow({
     group: flattenAnnotation,
@@ -1765,19 +1765,19 @@ export const drawFlatten = (curLayerIndex, d, i, width, height) => {
 
   middleText.append('tspan')
     .style('dominant-baseline', 'hanging')
-    .text('Same flattening');
+    .text('对每个神经元');
   
   middleText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .attr('x', textX)
     .attr('dy', '1em')
-    .text('operation for');
+    .text('进行相同的');
 
   middleText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .attr('x', textX)
     .attr('dy', '1em')
-    .text('each neuron');
+    .text('展平操作');
 
   drawArrow({
     group: flattenAnnotation,

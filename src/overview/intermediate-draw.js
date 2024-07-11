@@ -900,13 +900,13 @@ const drawIntermediateLayerAnnotation = (arg) => {
   
   slideText.append('tspan')
     .style('dominant-baseline', 'hanging')
-    .text('Slide kernel over input channel');
+    .text('在输入通道上滑动卷积核');
 
   slideText.append('tspan')
     .attr('x', sliderX)
     .attr('dy', '1em')
     .style('dominant-baseline', 'hanging')
-    .text('to get intermediate result');
+    .text('来得到中间输出');
 
   // slideText.append('tspan')
   //   .attr('x', sliderX)
@@ -919,12 +919,12 @@ const drawIntermediateLayerAnnotation = (arg) => {
     .attr('dy', '1.2em')
     .style('dominant-baseline', 'hanging')
     .style('font-weight', 700)
-    .text('Click ');
+    .text('点击这里 ');
   
   slideText.append('tspan')
     .style('dominant-baseline', 'hanging')
     .style('font-weight', 400)
-    .text('to learn more')
+    .text('查看细节')
 
   drawArrow({
     group: group,
@@ -947,25 +947,25 @@ const drawIntermediateLayerAnnotation = (arg) => {
 
   slideText2.append('tspan')
     .style('dominant-baseline', 'hanging')
-    .text('Each input chanel');
+    .text('每一个输入通道');
 
   slideText2.append('tspan')
     .attr('x', sliderX)
     .attr('dy', '1em')
     .style('dominant-baseline', 'hanging')
-    .text('gets a different kernel');
+    .text('有一个不同的卷积核');
 
   slideText2.append('tspan')
     .attr('x', sliderX)
     .attr('dy', '1.3em')
     .style('font-weight', 700)
     .style('dominant-baseline', 'hanging')
-    .text('Hover over ');
+    .text('把鼠标悬停在卷积核上 ');
 
   slideText2.append('tspan')
     .style('font-weight', 400)
     .style('dominant-baseline', 'hanging')
-    .text('to see value!')
+    .text('来查看卷积核参数！')
 
   drawArrow({
     group: group,
@@ -1006,13 +1006,13 @@ const drawIntermediateLayerAnnotation = (arg) => {
   
   plusText.append('tspan')
     .style('dominant-baseline', 'hanging')
-    .text('Add up all intermediate');
+    .text('把所有卷积核产生的中间结果相加');
   
   plusText.append('tspan')
     .attr('x', textX)
     .attr('dy', '1em')
     .style('dominant-baseline', 'hanging')
-    .text('results and then add bias');
+    .text('再加上偏差值（bias）');
   
   if (i === 9) {
     drawArrow({
